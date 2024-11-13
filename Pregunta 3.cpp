@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-// Función para calcular (base^exponente) mod n
+// FunciÃ³n para calcular (base^exponente) mod n
 int potenciaModular(int base, int exponente, int n) {
     int resultado = 1;
     base = base % n;
@@ -16,7 +16,7 @@ int potenciaModular(int base, int exponente, int n) {
     return resultado;
 }
 
-// Función para cifrar un mensaje utilizando la clave pública (n, e)
+// FunciÃ³n para cifrar un mensaje utilizando la clave pÃºblica (n, e)
 vector<int> CifradoRsa(string mensaje, int n, int e) {
     vector<int> mensajeCifrado;
     for (char caracter : mensaje) {
@@ -29,11 +29,11 @@ vector<int> CifradoRsa(string mensaje, int n, int e) {
 
 int main() {
     string mensaje = "HOLA MUNDO";
-    int p = 61; // Número primo
-    int q = 53; // Número primo
+    int p = 17; // NÃºmero primo
+    int q = 23; // NÃºmero primo
     int n = p * q;
     int phi = (p - 1) * (q - 1);
-    int e = 17;
+    int e = 15;
 
 
     vector<int> mensajeCifrado = CifradoRsa(mensaje, n, e);
